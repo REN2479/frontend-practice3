@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>特色美食推荐</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #e65c3c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin-top:10px;
+            display: flex;
+            gap:20px;
+            justify-content: center;
+        }
+        nav a {
+            color:#fff;
+            text-decoration: none;
+        }
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding:0 20px;
+            /* Grid卡片布局 */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .food-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding:16px;
+            box-shadow: 2px 2px 8px #eee;
+        }
+        .food-card h3 {
+            color:#e65c3c;
+            margin-bottom:8px;
+        }
+        footer {
+            text-align:center;
+            padding:20px;
+            color:#666;
+            margin-top:40px;
+        }
+        /* 媒体查询 响应式断点 */
+        @media (max-width:768px){
+            main{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+        @media (max-width:480px){
+            main{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>各地特色美食推荐</h1>
+        <nav>
+            <a href=" ">首页</a >
+            <a href="#">滇味美食</a >
+            <a href="#">川味美食</a >
+            <a href="#">联系我们</a >
+        </nav>
+    </header>
+    <main>
+        <div class="food-card">
+            <h3>云南米线</h3>
+            <p>云南特色美食，汤底鲜香，配料丰富。</p >
+        </div>
+        <div class="food-card">
+            <h3>重庆火锅</h3>
+            <p>麻辣醇厚，牛油锅底香气浓郁。</p >
+        </div>
+        <div class="food-card">
+            <h3>北京烤鸭</h3>
+            <p>外皮酥脆，肉质鲜嫩，卷饼食用。</p >
+        </div>
+        <div class="food-card">
+            <h3>广州早茶虾饺</h3>
+            <p>皮薄通透，馅料饱满，广式经典点心。</p >
+        </div>
+        <div class="food-card">
+            <h3>西安肉夹馍</h3>
+            <p>外皮焦酥，卤肉咸香，西北特色小吃。</p >
+        </div>
+        <div class="food-card">
+            <h3>长沙臭豆腐</h3>
+            <p>闻着臭吃着香，汤汁鲜辣入味。</p >
+        </div>
+    </main>
+    <footer>
+        <p>美食推荐页面 ©2026</p >
+    </footer>
+</body>
+</html>
